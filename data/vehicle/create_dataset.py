@@ -21,7 +21,7 @@ def preprocess(x):
 def generate_data():
     X = []
     y = []
-    mat = scipy.io.loadmat('./raw_data/vehicle.mat')
+    mat = scipy.io.loadmat('fair_flearn/data/raw_data/vehicle.mat')
     raw_x, raw_y = mat['X'], mat['Y']
     print("number of users:", len(raw_x), len(raw_y))
     print("number of features:", len(raw_x[0][0][0]))
@@ -47,8 +47,8 @@ def main():
     train_data = {'users': [], 'user_data':{}, 'num_samples':[]}
     test_data = {'users': [], 'user_data':{}, 'num_samples':[]}
 
-    train_path = "./data/train/mytrain.json"
-    test_path = "./data/test/mytest.json"
+    train_path = "fair_flearn/data/vehicle/data/train/mytrain.json"
+    test_path = "fair_flearn/data/vehicle/data/test/mytest.json"
 
 
     X, y = generate_data()
