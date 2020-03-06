@@ -119,6 +119,7 @@ def read_options():
     # load selected trainer
     opt_path = 'flearn.trainers.%s' % parsed['optimizer']
     mod = importlib.import_module(opt_path)
+    print('mod: ', mod)
     optimizer = getattr(mod, 'Server')
 
     # add selected model parameter
